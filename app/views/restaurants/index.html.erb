@@ -1,0 +1,8 @@
+<h1>WELCOME TO THE RESTAURANT APP</h1>
+
+<% @restaurants.each do |restaurant| %>
+<h2 class= "text-info"> Restaurant: <%= link_to restaurant.name, restaurant_path(restaurant), class: "text-dark" %></h2>
+<h3> <%= restaurant.address %> - Cuisine: <%= restaurant.category %> </h3>
+<% end %>
+
+<%= link_to "Add a restaurant", new_restaurant_path, class:'btn btn-primary m-3 p-3' %>
